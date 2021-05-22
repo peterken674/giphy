@@ -24,9 +24,9 @@ body {
 
 .search-input {
   margin: 0 !important;
-  border-radius: 0.5rem !important;
-  width: 95%;
-  height: 5rem;
+  border-radius:0.5rem 0 0 0.5rem !important;
+  width: 90%;
+  height: 3.5rem;
 }
 
 .search-button {
@@ -35,7 +35,8 @@ body {
   background-color: #ff009d;
   font-size: large;
   color: white;
-  height: 5rem;
+  height:3.5rem;
+  border-radius: 0 0.5rem 0.5rem 0 !important;
 }
 .navbar-brand{
     font-weight: 800;

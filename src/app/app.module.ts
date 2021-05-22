@@ -5,20 +5,21 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { GiphComponent } from './giph/giph.component';
-import { GiphySearchComponent } from './giphy-search/giphy-search.component';
+import { GifService } from './gif-service/gif.service';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
     AppComponent,
-    GiphComponent,
-    GiphySearchComponent
+    GiphComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    NgbModule
+    NgbModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [GifService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

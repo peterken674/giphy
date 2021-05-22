@@ -4,31 +4,14 @@
     <a class="navbar-brand"><b>GIPHY</b></a>
     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
       <div class="navbar-nav">
-        <a
-          class="nav-item nav-link active"
-          routerLink="home"
-          routerLinkActive="active"
-          >Trending<span class="sr-only"></span
-        ></a>
-        <a
-          class="nav-item nav-link active"
-          routerLink="about"
-          routerLinkActive="active"
-          >Entertainment</a
-        >
-        <a
-          class="nav-item nav-link active"
-          routerLink="home"
-          routerLinkActive="active"
-          >Sports<span class="sr-only"></span
-        ></a>
+        <a class="nav-item nav-link active" routerLink="home" routerLinkActive="active">Trending<span
+            class="sr-only"></span></a>
+        <a class="nav-item nav-link active" routerLink="about" routerLinkActive="active">Entertainment</a>
+        <a class="nav-item nav-link active" routerLink="home" routerLinkActive="active">Sports<span
+            class="sr-only"></span></a>
         <a class="nav-item nav-link active" routerLink="about">Stickers</a>
-        <a
-          class="nav-item nav-link active"
-          routerLink="home"
-          routerLinkActive="active"
-          >Artists<span class="sr-only"></span
-        ></a>
+        <a class="nav-item nav-link active" routerLink="home" routerLinkActive="active">Artists<span
+            class="sr-only"></span></a>
         <a class="nav-item nav-link active" routerLink="about">More</a>
       </div>
     </div>
@@ -36,33 +19,21 @@
   <div class="container">
     <div class="">
       <div class="search">
-        <input
-          placeholder="@username + tag to search within a verified channel"
-          class="form-control search-input"
-          width="80%"
-          name="title"
-          #searchTerm
-        />.
+        <input placeholder="@username + tag to search within a verified channel" class="form-control search-input"
+          width="80%" name="keyWord" #keyWord />.
         <!-- Search Button -->
-        <button class="btn btn-outline-success m-3 search-button">
+        <button class="btn btn-outline-success m-3 search-button" (click)='searchGIF(keyWord)'>
           <i class="fa fa-search"></i>
         </button>
       </div>
       <div id="banner">
-        <img
-          src="https://media.giphy.com/headers/2021-05-20-14-1621520067/MHAD_BANNER_HP-v03.gif"
-          width="100%"
-          alt=""
-        />
+        <img src="https://media.giphy.com/headers/2021-05-09-52-1620528773/BBMAS_BANNER_HP-2021.gif" width="100%"
+          alt="" />
       </div>
       <br />
-      <h5 class="">Trending Gifs</h5>
+      <h5 class="">Trending GIFs</h5>
       <div class="giphy-images">
-        <img
-          class="gif-image"
-          style="height: 280px; width: 280px"
-          alt="Giphy"
-        />
+        <img class="gif-image m-3" alt="Giphy" *ngFor='let gif of gifs; let i=index' src="{{ gifs[i].images.preview_gif.url}}"/>
       </div>
     </div>
   </div>
